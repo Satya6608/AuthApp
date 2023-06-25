@@ -1,0 +1,79 @@
+
+.left {
+    background-color: #000;
+  }
+  
+  .right {
+    background-color: #F5F5F5;
+  }
+  
+  .left-heading {
+    color: #fff;
+    font-weight: bold;
+    font-size: 72px;
+  }
+  
+  .sign-icon {
+    display: flex;
+    gap: 7px;
+    background-color: #fff;
+    border-radius: 10px;
+    height: 32px;
+    align-items: center;
+    padding: 0px 25px;
+    width: 47%;
+  }
+  
+  .sign-icon span {
+    font-size: 14px;
+  }
+  
+  .user-form {
+    background-color: #fff;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 10px 20px 30px;
+  }
+  
+  .user-form label {
+    width: 100%;
+    display: block;
+    margin: 10px 0;
+  }
+  
+  .user-form input {
+    display: block;
+    width: 100%;
+    background: #f5f5f5f5;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  
+  .user-form input:focus {
+    border: none;
+  }
+  
+  button.forgot-btn {
+    color: #346BD4;
+    text-decoration: underline;
+    margin: 8px 0;
+  }
+  
+  button.submit-btn {
+    margin-top: 6px;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  
+  p.register-btn {
+    text-align: center;
+    margin-top: 13px;
+  }
+  
+  p.register-btn button {
+    color: #346BD4;
+    text-decoration: underline;
+  }
