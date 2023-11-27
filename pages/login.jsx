@@ -6,10 +6,10 @@ import { signIn } from "next-auth/react"
 
 export default function Login() {
   function handleSignInGoogle(){
-    signIn('google',{callbackUrl:"http://localhost:3000"})
+    signIn('google',{callbackUrl:process.env.NEXTAUTH_URL || "http://localhost:3000"})
   }
   function handleSignInApple(){
-    signIn('apple',{callbackUrl:"http://localhost:3000"})
+    signIn('apple',{callbackUrl:process.env.NEXTAUTH_URL || "http://localhost:3000"})
   }
   return (
     <div className="flex h-[100vh]">
