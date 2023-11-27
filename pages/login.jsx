@@ -3,11 +3,10 @@ import googlepik from '../assets/images/google-icon.svg'
 import applepik from '../assets/images/apple-icon.svg'
 
 import { signIn } from "next-auth/react"
-import { Provider } from 'next-auth/client'
 
 export default function Login() {
   function handleSignInGoogle(){
-    signIn(Provider.google)
+    signIn('google',{callbackUrl:process.env.NEXTAUTH_URL || "http://localhost:3000"})
   }
   function handleSignInApple(){
     signIn('apple',{callbackUrl:process.env.NEXTAUTH_URL || "http://localhost:3000"})
