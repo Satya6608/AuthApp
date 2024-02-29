@@ -7,10 +7,9 @@ import { signIn } from "next-auth/react";
 export default function Login() {
   function handleSignInGoogle() {
     signIn("google", { callbackUrl: process.env.NEXTAUTH_URL });
-    
   }
   function handleSignInApple() {
-    signIn("github", { callbackUrl: process.env.NEXTAUTH_URL });
+    signIn("apple", { callbackUrl: process.env.NEXTAUTH_URL });
   }
   return (
     <div className="flex h-[100vh]">

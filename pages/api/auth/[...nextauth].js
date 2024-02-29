@@ -7,9 +7,9 @@ export default NextAuth({
       clientId: process.env.GOOGLE_CLIENT,
       clientSecret: process.env.GOOGLE_SECRET,
     }),
-    GitHubProvider({
-      clientId: process.env.GITHUB_CLIENT,
-      clientSecret: process.env.GITHUB_SECRET,
+    AppleProvider({
+      clientId: process.env.APPLE_ID,
+      clientSecret: process.env.APPLE_SECRET,
     }),
   ],
 });
