@@ -7,6 +7,7 @@ import { signIn } from "next-auth/react";
 export default function Login() {
   function handleSignInGoogle() {
     signIn("google", { callbackUrl: process.env.NEXTAUTH_URL });
+    
   }
   function handleSignInApple() {
     signIn("github", { callbackUrl: process.env.NEXTAUTH_URL });
