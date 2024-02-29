@@ -9,7 +9,7 @@ export default function Login() {
     signIn("google", { callbackUrl: process.env.NEXTAUTH_URL });
   }
   function handleSignInApple() {
-    signIn("apple", { callbackUrl: process.env.NEXTAUTH_URL });
+    signIn("github", { callbackUrl: process.env.NEXTAUTH_URL });
   }
   return (
     <div className="flex h-[100vh]">
