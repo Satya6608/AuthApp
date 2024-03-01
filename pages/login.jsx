@@ -14,6 +14,7 @@ export default function Login() {
   }
   function handleSignInGithub() {
     signIn("github", { callbackUrl: process.env.NEXTAUTH_URL });
+    router.push("/");
   }
   return (
     <div className="flex h-[100vh]">
