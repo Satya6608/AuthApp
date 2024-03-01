@@ -3,21 +3,22 @@ import googlepik from "../assets/images/google-icon.svg";
 import applepik from "../assets/images/apple-icon.svg";
 
 import { signIn } from "next-auth/react";
+import { useRouter } from "next/router";
+import { getSession } from "next-auth/react";
 
 export default function Login() {
+  const router = useRouter();
   function handleSignInGoogle() {
     signIn("google", { callbackUrl: process.env.NEXTAUTH_URL });
+    router.push("/");
   }
   function handleSignInApple() {
     signIn("apple", { callbackUrl: process.env.NEXTAUTH_URL });
   }
   return (
     <div className="flex h-[100vh]">
-      <div className="w-2/5 left h-[100%] grid place-items-center">
-        <h1 className="left-heading">Board.</h1>
-      </div>
-      <div className="w-3/5 right grid place-items-center">
-        <div className="h-[40%] w-[50%]">
+      <div className="w-full right grid place-items-center">
+        <div className="w-11/12 md:w-[50%]">
           <h1 className="text-[36px] font-bold">Sign In</h1>
           <h2 className="text-[16px] mb-[15px]">Sign in to your account</h2>
           <div className="flex gap-[10px] justify-between">
@@ -49,4 +50,20 @@ export default function Login() {
       </div>
     </div>
   );
+}
+export async function getServerSideProps({ req }) {
+  const session = await getSession({ req });
+
+  if (session) {
+    return {
+      redirect: {
+        destination: "/",
+        permanent: false,
+      },
+    };
+  }
+
+  return {
+    props: { session },
+  };
 }
