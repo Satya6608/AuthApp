@@ -12,8 +12,8 @@ export default function Login() {
     signIn("google", { callbackUrl: process.env.NEXTAUTH_URL });
     router.push("/");
   }
-  function handleSignInApple() {
-    signIn("apple", { callbackUrl: process.env.NEXTAUTH_URL });
+  function handleSignInGithub() {
+    signIn("github", { callbackUrl: process.env.NEXTAUTH_URL });
   }
   return (
     <div className="flex h-[100vh]">
@@ -26,9 +26,9 @@ export default function Login() {
               <Image src={googlepik} width={16} height={16} alt="Google" />
               <span>Sign in with Google</span>
             </button>
-            <button className="sign-icon" onClick={handleSignInApple}>
+            <button className="sign-icon" onClick={handleSignInGithub}>
               <Image src={applepik} width={16} height={16} alt="Google" />
-              <span>Sign in with Apple</span>
+              <span>Sign in with Github</span>
             </button>
           </div>
           <div className="user-form">
