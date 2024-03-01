@@ -18,7 +18,7 @@ export default function Login() {
   return (
     <div className="flex h-[100vh]">
       <div className="w-full right grid place-items-center">
-        <div className="w-11/12 md:w-[50%]">
+        <div className="w-11/12 md:w-4/12">
           <h1 className="text-[36px] font-bold">Sign In</h1>
           <h2 className="text-[16px] mb-[15px]">Sign in to your account</h2>
           <div className="flex gap-[10px] justify-between">
